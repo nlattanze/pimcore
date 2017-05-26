@@ -9,7 +9,7 @@
             {{ content|raw }}
         </div>
         <div class="col-sm-4">
-            {% for i in pimcore_block('images').getIndexIterator() %}
+            {% for i in pimcore_iterate_block(pimcore_block('images')) %}
                 {% if not editmode %}
                     <a href="{{ pimcore_image('image').getThumbnail('galleryLightbox') }}" class="thumbnail">
                 {% endif %}

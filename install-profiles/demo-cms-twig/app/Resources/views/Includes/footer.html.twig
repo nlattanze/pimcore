@@ -11,7 +11,7 @@
 
     <p class="links">
         &copy; {{ "now"|date('Y') }} pimcore GmbH &middot;
-        {% for i in pimcore_block('links').getIndexIterator() %}
+        {% for i in pimcore_iterate_block(pimcore_block('links')) %}
             {{ pimcore_link('link') }}
         {% endfor %}
     </p>

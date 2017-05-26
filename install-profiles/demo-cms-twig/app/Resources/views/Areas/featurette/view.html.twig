@@ -1,7 +1,7 @@
 {% set featuretteBlock = pimcore_block('block') %}
 
 <section class="area-featurette">
-    {% for i in featuretteBlock.getIndexIterator() %}
+    {% for i in pimcore_iterate_block(featuretteBlock) %}
         {% set positionSelect = pimcore_select('position', {
             store: [["left","left"],["right","right"]]
         }) %}
