@@ -2,11 +2,8 @@
 
 {{ block('editmode_header') }}
 
-{% set teaserBlock = pimcore_block('teasers') %}
-
 <div class="teasers">
-    {% for i in (0..(teaserBlock.count-1)) %}
-        {% do teaserBlock.loop() %}
+    {% for i in pimcore_block('teasers').getIndexIterator() %}
         {{ pimcore_snippet('teaser') }}
     {% endfor %}
 </div>
