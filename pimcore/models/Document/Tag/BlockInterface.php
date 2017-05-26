@@ -27,14 +27,6 @@ interface BlockInterface
     public function loop();
 
     /**
-     * Returns an iterator for all indexes. Calls loop() implicitely and can be used to cycle block elements (e.g. in
-     * Twig templates).
-     *
-     * @return \Generator|int[]
-     */
-    public function getIndexIterator(): \Generator;
-
-    /**
      * Is executed at the beginning of the loop and setup some general settings
      *
      * @return $this

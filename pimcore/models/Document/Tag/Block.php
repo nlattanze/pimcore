@@ -167,19 +167,6 @@ class Block extends Model\Document\Tag implements BlockInterface
     }
 
     /**
-     * Returns an iterator for all indexes. Calls loop() implicitely and can be used to cycle block elements (e.g. in
-     * Twig templates).
-     *
-     * @return \Generator|int[]
-     */
-    public function getIndexIterator(): \Generator
-    {
-        while ($this->loop()) {
-            yield $this->getCurrentIndex();
-        }
-    }
-
-    /**
      * Alias for loop
      *
      * @deprecated
